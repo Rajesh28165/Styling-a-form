@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+    body {
+        background:radial-gradient(circle,rgb(120,190,255)50%, rgb(255,22,22)100%);
+    }
+    .heading {
+        text-align: center;
+        margin-top: 10px
+        margin-bottom: 20px
+    }
+    .form-container{
+        background-color:#F4F4F4;
+        box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+        width:450px;
+        text-align:center;
+        margin:auto;
+        padding:20px;
+        border-radius:10px
+    }
+    .input-field{
+        width:100%;
+        padding:10px;
+        border-radius:5px;
+        background-color: #ffffff;
+        margin-bottom: 15px;
+    }
+    label{
+        display:block;
+        text-align:left;
+        font-weight:bold;
+        margin-bottom: 5px;
+        color: #000000;
+        font-family:  Arial, sans-serif;
+    }
+    .text-area{
+        width:100%;
+        height:100px;
+        padding:10px;
+    }
+    .rating{
+        margin-bottom:15px;
+        text-align:left;
+        display:flex;
+        justify-content:space-between;
+    }
+    span{
+        color:red;
+        font-weight:bold;
+    }
+    .terms{
+        text-align:left;
+    }
+    .terms label{
+        display:inline;
+    }
+    .x{
+        background-color:green;
+        padding=4px;
+        font-size:20px;
+        font-weight:bold;
+        margin-top:10px;
+        border-radius:5px;
+        color:white;
+        width:100px;
+        height:40px;
+    }
+</style>
+</head>
+
+<body>
+<div>
+    <h1 class="heading">Feedback Form</h1>
+</div>
+
+<div class="form-container">
+
+    <form action="#" method="post">
+
+        <label for="feedbackType">Feedback Type:</label>
+        <select class="input-field" id="feedbackType" name="feedbackType" required>
+            <option value="">Select</option>
+            <option value="suggestion">Suggestion</option>
+            <option value="complaint">Complaint</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea class="text-area" id="message" name="message" required></textarea>
+
+        <label for="rating">Website Rating</label>
+        <div class="rating">
+            <input class="radio button" type="radio" required/>
+            <label for="exellent">Exellent</label>
+            <input class="radio button" type="radio"/>
+            <label for="good">Good</label>
+            <input class="radio button" type="radio"/>
+            <label for="average">Average</label>
+            <input class="radio button" type="radio"/>
+            <label for="poor">Poor</label>
+        </div>
+
+        <label for="age">Age(10-100)</label>
+        <input class="input-field" id="age" name="age" type="number" required/>
+
+        <label for email="email">Email<span>*</span></label>
+        <input class="input-field" id="email" name="email" type="email" required/>
+
+        <label for="password">Password(min. 8 characters)</label>
+        <input class="input-field" id="'password" name="'password" type="text" required/>
+
+        <label for="url">Website URL (optional)</label>
+        <input class="input-field" id="url" name="url" type="text">
+
+        <div class="terms">
+            <input type="checkbox"/>
+            <label>I agree to the terms and conditions.</label>
+        </div>
+
+        <button class="x" type="submit">Submit</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
